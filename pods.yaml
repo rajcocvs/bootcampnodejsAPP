@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demoproject-pods
+spec:
+  containers:
+  - name: demoproject
+    image: nisha0111/demoproject:v1
+    ports:
+    - containerPort: 3001

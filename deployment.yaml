@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoproject-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demoproject-app
+  template:
+    metadata:
+      labels:
+        app: demoproject-app
+    spec:
+      containers:
+      - name: demoproject-app
+        image: nisha0111/demoproject:v1
+        ports:
+        - containerPort: 3001
